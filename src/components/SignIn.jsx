@@ -35,6 +35,7 @@ const SignIn = () => {
           id="pswd"
           onChange={(e) => setPassword(e.target.value)}
           required
+					min='6'
         />
         <button className="btn">Sign up</button>
       </form>
