@@ -6,14 +6,21 @@ import { auth } from "../firebase/config";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const handleSignin = async (e) => {
     e.preventDefault();
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+    }
+
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/home");
     } catch (error) {
       console.error(error);
+      setError("Failed to register. Please try again.");
     }
   };
 
@@ -35,8 +42,9 @@ const SignIn = () => {
           id="pswd"
           onChange={(e) => setPassword(e.target.value)}
           required
-					min='6'
+          min="6"
         />
+				{error && <p>{error}</p>}
         <button className="btn">Sign up</button>
       </form>
       <p>
