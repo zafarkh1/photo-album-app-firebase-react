@@ -32,18 +32,18 @@ body {
   font-size: 2.6rem;
 }
 
-form {
+.upload-form {
   margin: 30px auto 10px;
   text-align: center;
 }
 
-label input {
+label .upload-input {
   height: 0;
   width: 0;
   opacity: 0;
 }
 
-label {
+.upload-label {
   display: block;
   width: 30px;
   height: 30px;
@@ -56,7 +56,7 @@ label {
   font-size: 1.5rem;
 }
 
-label:hover {
+.upload-label:hover {
   background-color: var(--primary);
   color: white;
 }
@@ -119,4 +119,80 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+
+/* Assuming you have a separate CSS file for styling */
+/* You can adjust these styles as needed */
+
+/* Base styles */
+.container {
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form.form-auth {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-auth label {
+  margin-bottom: 5px;
+}
+
+.form-auth input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    max-width: 300px; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 250px; /* Adjust as needed */
+  }
+
+  .form-auth input,
+  .btn {
+    font-size: 14px; /* Adjust as needed */
+  }
+}
+
+/* Custom styles for the Google button */
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #f1f1f1;
+}
+
+.google-icon {
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  margin-right: 10px;
 }
