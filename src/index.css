@@ -125,6 +125,10 @@ label .upload-input {
 /* You can adjust these styles as needed */
 
 /* Base styles */
+h1 {
+  text-align: center;
+}
+
 .container {
   max-width: 400px; /* Adjust as needed */
   margin: 0 auto;
@@ -175,6 +179,12 @@ form.form-auth {
 }
 
 /* Custom styles for the Google button */
+.google {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .google-button {
   display: flex;
   align-items: center;

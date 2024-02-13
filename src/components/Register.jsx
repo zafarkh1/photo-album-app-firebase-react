@@ -50,7 +50,7 @@ const Register = () => {
         <button className="btn">Sign up</button>
       </form>
       <div className="google">
-        <p>-------- or --------</p>
+        <p>-------- or sign up with --------</p>
         <button className="google-button" onClick={handleGoogle}>
           <img
             src="https://banner2.cleanpng.com/20180326/gte/kisspng-google-logo-g-suite-google-guava-google-plus-5ab8b5b15fd9f4.0166567715220545773927.jpg"
