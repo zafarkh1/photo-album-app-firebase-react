@@ -45,10 +45,10 @@ const SignIn = () => {
           min="6"
         />
 				{error && <p>{error}</p>}
-        <button className="btn">Sign up</button>
+        <button className="btn">Sign in</button>
       </form>
       <p>
-        Need an account? <Link to="/">Sign in</Link>
+        Need an account? <Link to="/">Sign up</Link>
       </p>
     </div>
   );
